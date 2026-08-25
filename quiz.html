@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — LCTK</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="card pad topnav">
+    <div class="nav-left">
+      <a class="btn ghost" href="index.html">← Kategori</a>
+      <strong id="cat-title">Quiz</strong>
+    </div>
+    <div class="nav-right">
+      <a class="btn ghost" href="profile.html">Profil</a>
+      <button type="button" class="btn ghost" id="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <header class="card pad">
+    <h1 id="heading">Quiz</h1>
+    <p class="sub" id="sub">Soal & ABCD diacak · autosave per soal</p>
+    <div class="stats">
+      <div class="stat"><b id="current">—</b><span>Soal</span></div>
+      <div class="stat"><b id="score">0</b><span>Poin</span></div>
+      <div class="stat"><b id="correct">0</b><span>Benar</span></div>
+      <div class="stat"><b id="wrong">0</b><span>Salah</span></div>
+      <div class="stat"><b id="pct-done">0%</b><span>Selesai</span></div>
+      <div class="stat"><b id="timer">00:00</b><span>Waktu</span></div>
+      <div class="stat"><b id="avg-time">—</b><span>Avg / soal</span></div>
+      <div class="stat"><b id="remain">—</b><span>Sisa</span></div>
+    </div>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <div class="progress-meta">
+      <span id="progress-label">0 dikerjakan</span>
+      <button type="button" class="btn ghost" id="new-attempt-btn" style="padding:6px 10px;font-size:.78rem">Attempt baru</button>
+    </div>
+  </header>
+
+  <main class="card pad" id="quiz"><div class="loading">Menyiapkan attempt…</div></main>
+</div>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>

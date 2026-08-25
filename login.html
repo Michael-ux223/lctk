@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — LCTK Quiz</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="auth-shell">
+  <div class="auth-box card pad">
+    <div class="hero-brand">
+      <p class="eyebrow">LCTK 2026 · GitHub Pages ready</p>
+      <h1>Quiz IT</h1>
+      <p class="sub">Login tersimpan di perangkat (JSON/localStorage). Cocok untuk GitHub Pages.</p>
+    </div>
+    <div class="tabs">
+      <button type="button" class="tab active" data-mode="login">Login</button>
+      <button type="button" class="tab" data-mode="register">Register</button>
+    </div>
+    <form id="auth-form">
+      <label>Username
+        <input id="username" name="username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" autocomplete="username">
+      </label>
+      <label>Password
+        <input id="password" name="password" type="password" required minlength="6" autocomplete="current-password">
+      </label>
+      <p id="auth-error" class="form-error" hidden></p>
+      <button class="btn primary block" id="auth-submit" type="submit">Masuk</button>
+    </form>
+  </div>
+</div>
+<script src="assets/js/core.js"></script>
+<script>
+(async () => {
+  const ctx = await LCTK.AppContext.create();
+  if (ctx.auth.currentUser()) location.href = 'index.html';
+
+  let mode = 'login';
+  const err = document.getElementById('auth-error');
+  const submit = document.getElementById('auth-submit');
+
+  document.querySelectorAll('.tab').forEach((t) => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach((x) => x.classList.remove('active'));
+      t.classList.add('active');
+      mode = t.dataset.mode;
+      submit.textContent = mode === 'login' ? 'Masuk' : 'Daftar';
+      err.hidden = true;
+    });
+  });
+
+  document.getElementById('auth-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    err.hidden = true;
+    submit.disabled = true;
+    try {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (mode === 'login') await ctx.auth.login(username, password);
+      else await ctx.auth.register(username, password);
+      location.href = 'index.html';
+    } catch (ex) {
+      err.textContent = ex.message;
+      err.hidden = false;
+    } finally {
+      submit.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>

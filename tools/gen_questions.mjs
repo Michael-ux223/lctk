@@ -1,13 +1,17 @@
 /** Generate data/questions.json — run: node tools/gen_questions.mjs */
 import fs from 'fs';
+import { spawnSync } from 'child_process';
 
 const cats = {
-  android: { id: 'android', title: 'Android Versions', desc: 'Codename & versi Android — soal & opsi diacak' },
+  android: { id: 'android', title: 'Android Versions', desc: 'Strictly codename & nomor versi saja' },
+  android_pengetahuan: { id: 'android_pengetahuan', title: 'Pengetahuan Android', desc: 'APK, komponen app, Manifest, IDE, runtime — bukan versi' },
   singkatan: { id: 'singkatan', title: 'Singkatan IT', desc: 'Jebakan mirip-mirip — harus hafal yang paling tepat' },
   software_klasik: { id: 'software_klasik', title: 'Software Klasik', desc: 'Browser pertama, app map, software legendaris' },
   ai: { id: 'ai', title: 'Artificial Intelligence', desc: 'Dasar AI, ML, LLM, dan istilah modern' },
   hardware: { id: 'hardware', title: 'Hardware Komputer', desc: 'Kenali alat dari gambar — semua opsi masuk akal' },
-  office: { id: 'office', title: 'Word · Excel · PowerPoint', desc: 'Macro, rumus, shortcut, dan alur kerja Office' },
+  printer: { id: 'printer', title: 'Jenis Printer', desc: 'Inkjet, laser, dot matrix, thermal, 3D, plotter, dll.' },
+  office: { id: 'office', title: 'Word · Excel · PowerPoint', desc: 'Toolbar & jalur menu mirip — pilih yang paling tepat' },
+  keamanan: { id: 'keamanan', title: 'Keamanan Siber', desc: 'Malware *-ware, skenario hack, phishing, ransomware' },
 };
 
 const Q = [];
@@ -17,7 +21,7 @@ const add = (category, question, options, answer, explanation, image = null) => 
   Q.push({ id: id(), category, question, options, answer, explanation, image });
 };
 
-// ===== ANDROID =====
+// ===== ANDROID VERSIONS ONLY =====
 const android = [
   ['Android 1.5 codename?', ['Cupcake', 'Donut', 'Eclair', 'Froyo'], 0, 'Android 1.5 = Cupcake.'],
   ['Android 1.6 codename?', ['Cupcake', 'Donut', 'Eclair', 'Froyo'], 1, 'Android 1.6 = Donut.'],
@@ -41,16 +45,34 @@ const android = [
   ['Codename internal Android 15?', ['Upside Down Cake', 'Vanilla Ice Cream', 'Baklava', 'Cinnamon Bun'], 1, 'Android 15 = Vanilla Ice Cream.'],
   ['Codename internal Android 16?', ['Vanilla Ice Cream', 'Baklava', 'Cinnamon Bun', 'Quince Tart'], 1, 'Android 16 = Baklava.'],
   ['Codename internal Android 17?', ['Baklava', 'Cinnamon Bun', 'Chocolate Cake', 'Caramel Custard'], 1, 'Android 17 = Cinnamon Bun.'],
-  ['API level Android 5.0 Lollipop?', ['API 19', 'API 21', 'API 23', 'API 24'], 1, 'Lollipop 5.0 = API 21.'],
-  ['API level Android 6.0 Marshmallow?', ['API 21', 'API 22', 'API 23', 'API 24'], 2, 'Marshmallow = API 23.'],
-  ['API level Android 8.0 Oreo?', ['API 24', 'API 25', 'API 26', 'API 27'], 2, 'Oreo 8.0 = API 26.'],
-  ['API level Android 10?', ['API 28', 'API 29', 'API 30', 'API 31'], 1, 'Android 10 = API 29.'],
-  ['Runtime default Android modern?', ['Dalvik', 'ART', 'JVM HotSpot', 'Mono'], 1, 'Android Runtime (ART) menggantikan Dalvik.'],
-  ['File package aplikasi Android?', ['.exe', '.apk', '.dmg', '.msi'], 1, 'APK = Android Package.'],
   ['Urutan dessert 4.0→5.0 yang benar?', ['ICS → Jelly Bean → KitKat → Lollipop', 'ICS → KitKat → Jelly Bean → Lollipop', 'Jelly Bean → ICS → KitKat → Lollipop', 'KitKat → ICS → Jelly Bean → Lollipop'], 0, '4.0 ICS → 4.1–4.3 JB → 4.4 KitKat → 5.x Lollipop.'],
-  ['Android Go dirancang untuk?', ['Server enterprise', 'Perangkat low-RAM', 'Smartwatch saja', 'TV box premium'], 1, 'Android Go untuk perangkat berspesifikasi rendah.'],
+  ['Versi Android pertama yang memakai nama Pie adalah...', ['Android 8', 'Android 9', 'Android 10', 'Android 7'], 1, 'Android 9 = Pie.'],
+  ['Android ber-codename Oreo adalah versi...', ['7.0–7.1', '8.0–8.1', '9', '6.0'], 1, 'Oreo = Android 8.0–8.1.'],
+  ['Codename dessert terakhir sebelum nomor murni (Android 10) adalah...', ['Oreo', 'Pie', 'Nougat', 'Lollipop'], 1, 'Setelah Pie (9), Android 10 memakai Quince Tart (internal).'],
+  ['Android 5 dikenal sebagai...', ['KitKat', 'Lollipop', 'Marshmallow', 'Nougat'], 1, 'Android 5.x = Lollipop.'],
+  ['Android 12 internal dessert name?', ['Snow Cone', 'Tiramisu', 'Red Velvet Cake', 'Upside Down Cake'], 0, 'Android 12 = Snow Cone.'],
 ];
 android.forEach(([q, o, a, e]) => add('android', q, o, a, e));
+
+// ===== ANDROID PENGETAHUAN (bukan versi) =====
+const androidKnow = [
+  ['Runtime default Android modern adalah...', ['Dalvik', 'ART (Android Runtime)', 'JVM HotSpot murni', 'Mono Runtime'], 1, 'ART menggantikan Dalvik.'],
+  ['File paket installer aplikasi Android ber-ekstensi...', ['.exe', '.apk', '.dmg', '.ipa'], 1, 'APK = Android Package.'],
+  ['IDE resmi Google untuk pengembangan Android adalah...', ['Eclipse ADT saja', 'Android Studio', 'NetBeans Mobile', 'Xcode'], 1, 'Android Studio adalah IDE resmi.'],
+  ['Bahasa first-class yang direkomendasikan Google untuk Android modern...', ['Objective-C', 'Kotlin', 'Ruby', 'Pascal'], 1, 'Kotlin = first-class untuk Android.'],
+  ['Komponen yang mewakili satu layar UI di Android disebut...', ['Service', 'Activity', 'BroadcastReceiver', 'ContentProvider'], 1, 'Activity ≈ satu layar.'],
+  ['File yang mengatur permission & komponen aplikasi Android...', ['build.gradle saja', 'AndroidManifest.xml', 'proguard.cfg saja', 'res/values/colors.xml saja'], 1, 'AndroidManifest.xml mendeklarasikan app components & permissions.'],
+  ['Toko aplikasi resmi Google untuk Android...', ['App Store', 'Google Play Store', 'Microsoft Store', 'Galaxy Store saja'], 1, 'Google Play Store = store resmi default Google.'],
+  ['Android Go utamanya untuk...', ['Server rack', 'Perangkat low-RAM / entry-level', 'Hanya smartwatch', 'Mainframe'], 1, 'Android Go untuk spek rendah.'],
+  ['Folder resource layout XML biasanya di...', ['java/', 'res/layout/', 'assets/db/', 'META-INF/ only'], 1, 'Layout UI di res/layout.'],
+  ['Intent di Android dipakai untuk...', ['Mengirim/meminta aksi antar komponen (mis. buka Activity)', 'Mengganti kernel', 'Flash recovery saja', 'Mengatur DNS'], 1, 'Intent = messaging antar komponen.'],
+  ['Service di Android terutama untuk...', ['UI layar penuh', 'Pekerjaan latar belakang tanpa UI utama', 'Hanya menyimpan gambar', 'Mengganti Manifest'], 1, 'Service = background component.'],
+  ['Gradle pada proyek Android berfungsi sebagai...', ['Sistem build / dependency management', 'Emulator kamera', 'Play Store client', 'Kernel module'], 1, 'Gradle membangun APK/AAB.'],
+  ['AAB (Android App Bundle) berbeda dari APK karena...', ['Format publishing modern yang di-optimize Play Store', 'Hanya untuk iOS', 'File virus', 'Format Word'], 0, 'AAB = publishing format ke Play.'],
+  ['ContentProvider berguna untuk...', ['Berbagi data antar aplikasi secara terkontrol', 'Menggambar UI saja', 'Bootloader unlock', 'Overclock CPU'], 0, 'ContentProvider = data sharing API.'],
+  ['Emulator Android biasanya dijalankan dari...', ['Android Studio Device Manager / AVD', 'Microsoft Word', 'BIOS setup', 'Photoshop'], 0, 'AVD/emulator dari Android Studio.'],
+];
+androidKnow.forEach(([q, o, a, e]) => add('android_pengetahuan', q, o, a, e));
 
 // ===== SINGKATAN (tricky near-miss options) =====
 const singkatan = [
@@ -152,33 +174,98 @@ const hardware = [
 ];
 hardware.forEach(([q, o, a, e, img]) => add('hardware', q, o, a, e, img || null));
 
-// ===== OFFICE =====
+// ===== OFFICE (opsi mirip — hafalan jalur/toolbar) =====
 const office = [
-  ['Di Microsoft Word, jalur klasik untuk membuka editor VBA/Macro adalah...', ['File → Options → Customize Ribbon (centang Developer) lalu Developer → Visual Basic / Macros', 'Insert → Chart → Macro', 'Layout → Margins → Macro', 'References → Mailings → Macro'], 0, 'Aktifkan tab Developer, lalu Visual Basic/Macros.'],
-  ['Shortcut rekam macro di Word (umum) mendekati...', ['Alt + T, M, R (versi lama) / lewat tab Developer → Record Macro', 'Ctrl + P langsung merekam', 'F1 otomatis rekam', 'Alt + F4 merekam'], 0, 'Rekam macro dari tab Developer (atau menu legacy Tools).'],
-  ['Di Excel, rumus penjumlahan rentang A1:A10 yang benar...', ['=SUM(A1:A10)', '=ADD(A1:A10)', '=TOTAL(A1:A10)', '=PLUS(A1:A10)'], 0, 'SUM adalah fungsi agregasi standar.'],
-  ['Rumus Excel untuk rata-rata B1:B5...', ['=AVERAGE(B1:B5)', '=AVG(B1:B5)', '=MEAN(B1:B5)', '=MEDIAN(B1:B5)'], 0, 'AVERAGE = mean aritmetika.'],
-  ['VLOOKUP mencari nilai berdasarkan...', ['Kunci di kolom kiri tabel lalu ambil kolom ke-n', 'Selalu baris paling bawah saja', 'Nama file workbook lain wajib', 'Hanya chart'], 0, 'VLOOKUP vertical lookup.'],
-  ['XLOOKUP (Excel modern) keunggulan umum dibanding VLOOKUP...', ['Lebih fleksibel (kiri/kanan, default exact, dll.)', 'Hanya jalan di Word', 'Tidak bisa exact match', 'Wajib macro'], 0, 'XLOOKUP lebih powerful & fleksibel.'],
-  ['Di Excel, absolut reference untuk sel A1 ditulis...', ['$A$1', '#A#1', 'A1$', '&A&1'], 0, '$ mengunci kolom/baris.'],
-  ['Shortcut bold di Word/Excel umum...', ['Ctrl + B', 'Ctrl + Shift + L', 'Alt + B', 'Ctrl + Alt + B'], 0, 'Ctrl+B = bold.'],
-  ['Di PowerPoint, mode untuk melihat slide berurutan saat presentasi...', ['Slide Show', 'Notes Master saja', 'Handout Master saja', 'Backstage Info saja'], 0, 'Slide Show = presentasi.'],
-  ['Shortcut mulai slideshow dari slide pertama di PowerPoint...', ['F5', 'F2', 'Ctrl + Enter', 'Alt + F4'], 0, 'F5 memulai dari awal; Shift+F5 dari slide aktif.'],
-  ['Mail Merge di Word dipakai untuk...', ['Membuat dokumen massal dari data sumber (mis. Excel)', 'Mengompres gambar saja', 'Membuat pivot chart', 'Virtualisasi OS'], 0, 'Mail Merge = surat/label massal.'],
-  ['PivotTable di Excel paling tepat untuk...', ['Meringkas & menganalisis data secara interaktif', 'Menulis macro Word', 'Animasi slide', 'Enkripsi BIOS'], 0, 'PivotTable = ringkasan data.'],
-  ['Di Word, Page Break cepat umumnya...', ['Ctrl + Enter', 'Ctrl + Space', 'Alt + P', 'Shift + Space'], 0, 'Ctrl+Enter = page break.'],
-  ['Fungsi IF di Excel berbentuk...', ['=IF(kondisi, nilai_benar, nilai_salah)', '=IF(kondisi) hanya satu argumen wajib', '=WHEN(...)', '=CASEOF(...)'], 0, 'IF punya logical_test, value_if_true, value_if_false.'],
-  ['Di PowerPoint, Transitions berbeda dari Animations karena...', ['Transitions antar-slide; Animations pada objek di dalam slide', 'Transitions hanya untuk teks; Animations hanya untuk audio', 'Keduanya identik total', 'Transitions hanya di Word'], 0, 'Transition = pindah slide; Animation = objek.'],
-  ['Di Excel, COUNTIF menghitung sel yang...', ['Memenuhi satu kriteria', 'Selalu semua sel numerik tanpa kriteria', 'Hanya sel kosong', 'Hanya chart title'], 0, 'COUNTIF(range, criteria).'],
-  ['Untuk menampilkan rumus di sel Excel (toggle) umum memakai...', ['Ctrl + ` (grave accent)', 'Ctrl + Shift + F', 'Alt + Enter', 'F12'], 0, 'Ctrl+` menampilkan rumus di sheet.'],
-  ['Di Word, Styles berguna untuk...', ['Konsistensi format & outline/heading terstruktur', 'Mengganti PSU', 'Mengatur IP statis', 'Flash BIOS'], 0, 'Styles = formatting terpusat.'],
-  ['Chart di Excel dibuat cepat lewat...', ['Insert → Charts (atau Recommended Charts)', 'Review → Spelling → Chart', 'Data → Connections wajib dulu', 'File → Account'], 0, 'Insert Charts.'],
-  ['Macro yang disimpan di Personal.xlsb berguna agar...', ['Tersedia di hampir semua workbook Excel user tersebut', 'Hanya jalan di PowerPoint', 'Otomatis jadi add-in Word', 'Menghapus VBA'], 0, 'Personal Macro Workbook = global macros Excel.'],
+  ['Di Microsoft Word, "Copy formatting from one place and apply it to another" adalah fungsi dari...', ['Format Painter (Home)', 'Format Painter (Insert)', 'Format Painter (Layout)', 'Format Painter (References)'], 0, 'Format Painter ada di tab Home.'],
+  ['Select the best path for applying / running a macro on an Excel sheet...', ['Developer → Macros → pilih macro → Run', 'Insert → Sheet Options → Insert Macro', 'Layout → Arrange → Run Macro', 'Review → Protect → Insert Macro'], 0, 'Jalankan macro dari tab Developer → Macros.'],
+  ['Jalur paling tepat membuka Visual Basic Editor di Word/Excel modern...', ['Developer → Visual Basic', 'Insert → Text → Visual Basic', 'File → Info → Visual Basic', 'View → Macros → Visual Basic Options → Chart'], 0, 'VBE dibuka dari Developer → Visual Basic.'],
+  ['Untuk merekam macro baru di Excel, urutan paling tepat...', ['Developer → Record Macro', 'Insert → Record Macro', 'Data → Record Macro', 'Formulas → Record Macro'], 0, 'Record Macro ada di tab Developer.'],
+  ['Di Word, Mail Merge wizard klasik paling tepat dimulai dari...', ['Mailings → Start Mail Merge', 'Insert → Mail Merge', 'References → Mailings Merge', 'Home → Editing → Mail Merge'], 0, 'Mail Merge di tab Mailings.'],
+  ['"Find and replace text" di Word paling tepat lewat...', ['Home → Editing → Replace (Ctrl+H)', 'Insert → Text → Replace', 'Review → Language → Replace', 'Layout → Page Setup → Replace'], 0, 'Replace ada di Home → Editing.'],
+  ['Mengunci heading row agar tetap terlihat saat scroll di Excel...', ['View → Freeze Panes → Freeze Top Row', 'View → Freeze Panes → Freeze First Column', 'Data → Sort → Freeze Top Row', 'Home → Format → Freeze Top Row'], 0, 'Freeze Top Row di View → Freeze Panes.'],
+  ['Rumus penjumlahan A1:A10 yang paling tepat...', ['=SUM(A1:A10)', '=SUM(A1-A10)', '=ADD(A1:A10)', '=TOTAL(A1:A10)'], 0, 'Pakai SUM dengan rentang bertitik dua.'],
+  ['Rata-rata B1:B5 yang paling tepat...', ['=AVERAGE(B1:B5)', '=AVG(B1:B5)', '=MEAN(B1:B5)', '=AVERAGE(B1-B5)'], 0, 'AVERAGE(range) dengan : bukan -.'],
+  ['Referensi absolut sel A1 yang benar...', ['$A$1', '$A1$', 'A$1$', '#A#1'], 0, '$A$1 mengunci kolom dan baris.'],
+  ['VLOOKUP mencari nilai secara...', ['Vertikal di kolom kiri tabel, kembalikan kolom ke-n', 'Horizontal di baris atas tabel saja', 'Hanya di chart title', 'Hanya antar workbook terproteksi'], 0, 'VLOOKUP = vertical lookup.'],
+  ['Di PowerPoint, mulai slideshow dari slide pertama...', ['F5', 'Shift+F5', 'Ctrl+F5', 'Alt+F5'], 0, 'F5 dari awal; Shift+F5 dari slide aktif.'],
+  ['Perbedaan paling tepat Transitions vs Animations...', ['Transitions: antar-slide; Animations: objek dalam slide', 'Transitions: objek dalam slide; Animations: antar-slide', 'Keduanya hanya untuk teks WordArt', 'Keduanya hanya di Notes Master'], 0, 'Transition = pindah slide; Animation = objek.'],
+  ['Menambah slide baru di PowerPoint paling tepat...', ['Home → New Slide (Ctrl+M)', 'Insert → New Slide (Ctrl+N)', 'Design → New Slide', 'Slide Show → New Slide'], 0, 'New Slide di Home / Ctrl+M.'],
+  ['Menggabungkan sel di Excel (Merge & Center) ada di...', ['Home → Alignment → Merge & Center', 'Insert → Text → Merge & Center', 'Layout → Arrange → Merge & Center', 'Data → Outline → Merge & Center'], 0, 'Merge & Center di Home → Alignment.'],
+  ['PivotTable paling tepat dibuat lewat...', ['Insert → PivotTable', 'Data → PivotTable', 'Home → PivotTable', 'Formulas → PivotTable'], 0, 'Insert → PivotTable.'],
+  ['Chart cepat di Excel paling tepat lewat...', ['Insert → Charts', 'Data → Charts', 'Review → Charts', 'View → Charts'], 0, 'Charts di tab Insert.'],
+  ['Page Break di Word shortcut paling tepat...', ['Ctrl+Enter', 'Ctrl+Shift+Enter', 'Alt+Enter', 'Ctrl+Space'], 0, 'Ctrl+Enter = page break.'],
+  ['Styles (Heading 1, dll.) di Word ada di tab...', ['Home', 'Insert', 'Design saja', 'Layout saja'], 0, 'Gallery Styles di Home.'],
+  ['Ctrl+B di Word/Excel menerapkan...', ['Bold', 'Italic', 'Underline', 'Align Center'], 0, 'Ctrl+B = Bold.'],
+  ['Di Excel, COUNTIF menghitung sel yang...', ['Memenuhi satu kriteria pada range', 'Memenuhi banyak kriteria wajib (tanpa COUNTIFS)', 'Hanya sel kosong selalu', 'Hanya sel dengan chart'], 0, 'COUNTIF(range, criteria).'],
+  ['Menampilkan semua rumus di sheet Excel (toggle)...', ['Ctrl+` (grave)', 'Ctrl+Shift+`', 'Ctrl+Alt+`', 'Alt+`'], 0, 'Ctrl+` menampilkan rumus.'],
+  ['Macro global Excel biasanya disimpan di...', ['Personal Macro Workbook (PERSONAL.XLSB)', 'Normal.dotm saja', 'Presentation1.pptx', 'Desktop.ini'], 0, 'PERSONAL.XLSB untuk macro Excel global.'],
+  ['Justify paragraph di Word (rata kiri-kanan) shortcut umum...', ['Ctrl+J', 'Ctrl+L', 'Ctrl+R', 'Ctrl+E'], 0, 'Ctrl+J = Justify.'],
+  ['Select the best description: Format Painter di Word...', ['Salin format teks/paragraf lalu tempelkan ke tempat lain', 'Salin isi teks saja tanpa format', 'Salin gambar sebagai link', 'Salin macro antar dokumen'], 0, 'Format Painter = copy formatting.'],
+  ['Insert a header di Word paling tepat lewat...', ['Insert → Header & Footer → Header', 'Layout → Header & Footer → Header', 'Design → Header', 'References → Header'], 0, 'Header di Insert → Header & Footer.'],
+  ['Di PowerPoint, Notes Master berbeda dari Slide Master karena...', ['Notes Master mengatur halaman notes speaker; Slide Master layout slide', 'Keduanya identik total', 'Notes Master hanya untuk animasi', 'Slide Master hanya untuk handout printer'], 0, 'Notes Master ≠ Slide Master.'],
+  ['Conditional Formatting di Excel ada di...', ['Home → Styles → Conditional Formatting', 'Insert → Styles → Conditional Formatting', 'Data → Conditional Formatting', 'Formulas → Conditional Formatting'], 0, 'Conditional Formatting di Home.'],
+  ['Data Validation di Excel paling tepat lewat...', ['Data → Data Tools → Data Validation', 'Home → Data Validation', 'Insert → Data Validation', 'Review → Data Validation'], 0, 'Data Validation di tab Data.'],
+  ['Wrap Text di Excel (agar teks turun baris dalam sel) ada di...', ['Home → Alignment → Wrap Text', 'Insert → Text → Wrap Text', 'Layout → Wrap Text', 'View → Wrap Text'], 0, 'Wrap Text di Home → Alignment.'],
 ];
 office.forEach(([q, o, a, e]) => add('office', q, o, a, e));
 
+// ===== KEAMANAN SIBER (malware *-ware + skenario) =====
+const keamanan = [
+  ['Budi HP-nya diam-diam merekam ketikan password lalu dikirim ke orang lain. Itu paling tepat...', ['Keylogger', 'Adware', 'Freeware', 'Firmware'], 0, 'Keylogger merekam ketikan.'],
+  ['Siti membuka lampiran email, lalu file penting dienkripsi dan diminta bayar Bitcoin. Itu...', ['Ransomware', 'Spyware biasa tanpa enkripsi', 'Shareware', 'Middleware'], 0, 'Ransomware mengenkripsi data + tebusan.'],
+  ['Andi menginstall “apk gratis game”, tapi muncul iklan agresif terus-menerus. Paling dekat dengan...', ['Adware', 'Firmware', 'Courseware', 'Groupware'], 0, 'Adware = iklan mengganggu.'],
+  ['Malware yang menyamar sebagai program berguna (mis. “update Flash”) disebut...', ['Trojan horse', 'Worm murni tanpa payload', 'Freeware', 'Hardware'], 0, 'Trojan menyamar sebagai software sah.'],
+  ['Malware yang menyebar sendiri antar komputer lewat jaringan tanpa perlu file “host” disebut...', ['Worm', 'Trojan saja', 'Spyware saja', 'Scareware saja'], 0, 'Worm self-replicating via network.'],
+  ['Aplikasi diam-diam mengumpulkan riwayat chat & lokasi tanpa izin jelas. Ini...', ['Spyware', 'Software generik tanpa nuansa malware', 'Freeware selalu aman', 'Trialware'], 0, 'Spyware memata-matai pengguna.'],
+  ['Pop-up palsu “PC Anda kena virus! Klik di sini” untuk menakut-nakuti agar beli produk. Itu...', ['Scareware', 'Ransomware (sudah enkripsi)', 'Firmware', 'Spyware keylogger saja'], 0, 'Scareware = takut-takuti palsu.'],
+  ['Program yang tampak membantu tapi membajak browser / homepage disebut sering sebagai...', ['Browser hijacker (bentuk malware/PUA)', 'Just freeware', 'Compiler', 'Debugger'], 0, 'Browser hijacker mengubah setting browser.'],
+  ['Serangan yang mengelabui orang agar menyerahkan password (bukan eksploit teknis murni) adalah...', ['Social engineering / phishing', 'Brute-force GPU only', 'Buffer overflow saja', 'SQL index rebuild'], 0, 'Phishing = manipulasi manusia.'],
+  ['Email palsu “dari bank” meminta OTP. Teknik ini...', ['Phishing', 'Pharming saja selalu', 'Spimming', 'Vishing wajib telepon'], 0, 'Email penipuan kredensial = phishing.'],
+  ['DDoS paling tepat digambarkan sebagai...', ['Banjir trafik dari banyak sumber hingga layanan down', 'Enkripsi file korban', 'Keylogging', 'Install adware'], 0, 'DDoS = distributed denial of service.'],
+  ['Rootkit berbahaya karena...', ['Menyembunyikan keberadaan malware di level dalam sistem', 'Hanya menampilkan iklan', 'Hanya mempercepat RAM', 'Hanya mengubah wallpaper'], 0, 'Rootkit = stealth di sistem.'],
+  ['Botnet adalah...', ['Jaringan komputer zombie yang dikendalikan attacker', 'Jenis printer', 'Lisensi Office', 'Firmware BIOS resmi'], 0, 'Botnet = jaringan bot.'],
+  ['Crypto-miner gelap yang memakai CPU HP korban tanpa izin paling dekat dengan...', ['Cryptojacking', 'Ransomware klasik', 'Scareware pop-up saja', 'Freeware IDE'], 0, 'Cryptojacking = culik resource untuk mining.'],
+  ['Softphone Andi tiba-tiba menelepon nomor premium sendiri. Malware tipe ini sering disebut...', ['Dialer / malware berbiaya', 'Freeware', 'Middleware', 'Courseware'], 0, 'Dialer menghubungi nomor berbayar.'],
+  ['Perbedaan virus vs worm yang paling tepat...', ['Virus butuh host file; worm bisa menyebar mandiri lewat jaringan', 'Worm selalu butuh host; virus tidak', 'Keduanya identik total', 'Virus hanya di printer'], 0, 'Virus parasitic; worm self-contained spread.'],
+  ['Firewall terutama berfungsi...', ['Menyaring trafik jaringan masuk/keluar menurut aturan', 'Menghapus ransomware yang sudah enkripsi otomatis selalu', 'Mengganti PSU', 'Mengompilasi APK'], 0, 'Firewall = network filter.'],
+  ['2FA / MFA membantu karena...', ['Butuh faktor tambahan selain password', 'Menghapus semua trojan otomatis', 'Mengganti antivirus', 'Menonaktifkan DNS'], 0, 'Multi-factor authentication.'],
+  ['PUA / Potentially Unwanted Application paling tepat...', ['Aplikasi yang tidak jelas berbahaya tapi tidak diinginkan (toolbar, bundling)', 'Selalu ransomware', 'Selalu firmware resmi OEM', 'Selalu open source aman'], 0, 'PUA = unwanted/grayware.'],
+  ['Budi dikirimi USB “materi kuliah”; setelah dicolok, malware jalan otomatis. Vektor ini...', ['Removable media infection', 'SQL injection murni', 'DNS spoofing saja', 'XSS pada printer'], 0, 'Infeksi lewat media removable.'],
+  ['Man-in-the-middle (MITM) berarti...', ['Attacker menyisip di antara dua pihak yang berkomunikasi', 'Malware hanya di GPU', 'Hanya adware', 'Hanya freeze panes Excel'], 0, 'MITM = intercept komunikasi.'],
+  ['Zero-day exploit memanfaatkan...', ['Kerentanan yang belum ada patch publik', 'Password yang sudah diubah kemarin', 'Freeware legal', 'Update Windows resmi'], 0, 'Zero-day = belum ditambal vendor.'],
+  ['Backup offline / immutable berguna melawan ransomware karena...', ['Salinan data tidak ikut terenkripsi di sistem yang sama', 'Mempercepat trojan', 'Menambah adware', 'Menonaktifkan 2FA'], 0, 'Backup terpisah = pemulihan.'],
+  ['HTTPS membantu mengurangi risiko karena...', ['Mengenkripsi data antara browser dan server (TLS)', 'Menghapus worm otomatis', 'Mengganti antivirus', 'Memblokir semua USB'], 0, 'HTTPS = HTTP + TLS.'],
+  ['Wiper malware bertujuan utama...', ['Menghancurkan/menghapus data, bukan tebusan', 'Hanya menampilkan iklan', 'Hanya keylogging', 'Hanya mining'], 0, 'Wiper = destroy data.'],
+];
+keamanan.forEach(([q, o, a, e]) => add('keamanan', q, o, a, e));
+
+// ===== PRINTER =====
+const printer = [
+  ['Printer yang menyemprotkan tinta cair lewat nozzle disebut...', ['Inkjet', 'Laser', 'Dot matrix', 'Thermal transfer saja'], 0, 'Inkjet = semprot tinta.'],
+  ['Printer yang memakai toner & drum elektrostatik adalah...', ['Laser printer', 'Inkjet', 'Dot matrix', 'Plotter pena saja'], 0, 'Laser memakai toner.'],
+  ['Printer impact yang memukul pita tinta dengan jarum disebut...', ['Dot matrix', 'Inkjet', 'Laser', '3D FDM'], 0, 'Dot matrix = impact pin.'],
+  ['Printer struk kasir yang memakai panas pada kertas sensitif umumnya...', ['Thermal printer', 'Inkjet foto', 'Laser A3', 'Plotter cutting saja'], 0, 'Thermal receipt printer.'],
+  ['Printer berukuran besar untuk gambar teknik/CAD sering disebut...', ['Plotter', 'Dot matrix kecil', 'Thermal label saja', 'Inkjet portable saja'], 0, 'Plotter untuk format besar.'],
+  ['Printer 3D yang melelehkan filamen plastik (FDM) termasuk...', ['3D printer (additive manufacturing)', 'Laser 2D biasa', 'Dot matrix', 'Thermal fax saja'], 0, 'FDM = jenis 3D printer umum.'],
+  ['Perbedaan inkjet vs laser yang paling tepat...', ['Inkjet: tinta cair; Laser: toner bubuk + fuser', 'Keduanya wajib pita kain', 'Laser selalu lebih murah tinta per ml selalu', 'Inkjet tidak bisa warna'], 0, 'Teknologi pewarnaan berbeda.'],
+  ['Multifunction printer (MFP) biasanya menggabungkan...', ['Print + scan + copy (± fax)', 'Hanya CPU + GPU', 'Hanya router + switch', 'Hanya UPS + PSU'], 0, 'MFP = all-in-one.'],
+  ['Port legacy yang sering dipakai printer lama sebelum USB dominan...', ['Parallel (LPT)', 'HDMI', 'DisplayPort', 'Thunderbolt saja'], 0, 'Parallel port untuk printer lama.'],
+  ['Dye-sublimation printer umum untuk...', ['Cetak foto berkualitas tinggi', 'Cetak struk kasir murah saja', 'Impact multipart form saja', 'Cutting vinyl saja'], 0, 'Dye-sub sering untuk foto.'],
+  ['Solid ink printer (unik) memakai...', ['Blok tinta padat yang dilelehkan', 'Hanya toner laser standar', 'Hanya pita dot matrix', 'Hanya kertas thermal'], 0, 'Solid ink = crayon-like blocks.'],
+  ['Label printer di gudang sering memakai...', ['Thermal / thermal transfer label printer', 'Plotter pena A0 saja', '3D resin saja', 'CRT printer'], 0, 'Label thermal umum di logistik.'],
+  ['Printer LED mirip laser tetapi...', ['Menggunakan LED array menggantikan laser beam untuk exposure', 'Menggunakan pita kain', 'Tidak memakai toner', 'Hanya cetak 3D'], 0, 'LED printer ≈ elektrofotografi dengan LED.'],
+  ['Yang BUKAN jenis printer umumnya...', ['Router Wi-Fi', 'Inkjet', 'Laser', 'Dot matrix'], 0, 'Router bukan printer.'],
+  ['Keunggulan dot matrix di formulir rangkap (carbon copy)...', ['Impact bisa mencetak banyak lembar sekaligus', 'Lebih halus dari dye-sub foto', 'Tidak perlu pita', 'Selalu nirkabel wajib'], 0, 'Impact = multipart forms.'],
+  ['Toner habis biasanya terjadi pada...', ['Laser / LED printer', 'Inkjet saja selalu', 'Thermal murni tanpa ribbon', 'Plotter pena tinta India saja'], 0, 'Toner = laser/LED.'],
+  ['Cartridge tinta habis biasanya pada...', ['Inkjet', 'Laser enterprise saja', 'Dot matrix impact saja', 'Thermal receipt tanpa ink'], 0, 'Inkjet pakai ink cartridge/tank.'],
+  ['Print spooler di OS berfungsi...', ['Mengantre & mengelola pekerjaan cetak', 'Mengenkripsi ransomware', 'Mengganti motherboard', 'Menjalankan macro Excel'], 0, 'Spooler = print queue service.'],
+  ['DPI pada spesifikasi printer mengukur...', ['Resolusi cetak (dots per inch)', 'Kecepatan RAM', 'Kapasitas SSD', 'Voltase PSU'], 0, 'DPI = kerapatan titik.'],
+  ['PPM pada printer biasanya berarti...', ['Pages Per Minute (kecepatan cetak)', 'Pixels Per Millimeter wajib', 'Power Per Module', 'Packet Per MAC'], 0, 'PPM = kecepatan halaman/menit.'],
+];
+printer.forEach(([q, o, a, e]) => add('printer', q, o, a, e));
+
 const out = {
-  version: 2,
+  version: 3,
   categories: Object.values(cats),
   questions: Q,
 };
@@ -190,3 +277,7 @@ console.log('questions', Q.length);
 for (const c of out.categories) {
   console.log(c.id, Q.filter((x) => x.category === c.id).length);
 }
+
+// Always re-merge LCTK revisi bank after regenerating base
+const merge = spawnSync(process.execPath, ['tools/merge_revisi.mjs'], { stdio: 'inherit' });
+if (merge.status !== 0) process.exit(merge.status ?? 1);

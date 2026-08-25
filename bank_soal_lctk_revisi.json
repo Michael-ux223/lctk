@@ -1,0 +1,1289 @@
+[
+    {
+        "id": 1,
+        "soal": "Perangkat keras yang berfungsi untuk menampilkan output visual adalah ...",
+        "opsi": {
+            "A": "Keyboard",
+            "B": "Monitor",
+            "C": "Mouse",
+            "D": "Scanner"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 2,
+        "soal": "Jenis printer yang menggunakan tinta semprot adalah ...",
+        "opsi": {
+            "A": "Dot Matrix",
+            "B": "Inkjet",
+            "C": "Laserjet",
+            "D": "Thermal"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 3,
+        "soal": "Port yang digunakan untuk menghubungkan printer lama adalah ...",
+        "opsi": {
+            "A": "HDMI",
+            "B": "Parallel",
+            "C": "USB",
+            "D": "VGA"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 4,
+        "soal": "Fungsi utama dari RAM adalah ...",
+        "opsi": {
+            "A": "Menyimpan data permanen",
+            "B": "Memproses grafik",
+            "C": "Menyimpan data sementara",
+            "D": "Menyimpan sistem operasi"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 5,
+        "soal": "Contoh perangkat input adalah ...",
+        "opsi": {
+            "A": "Monitor",
+            "B": "Printer",
+            "C": "Keyboard",
+            "D": "Speaker"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 6,
+        "soal": "Shortcut untuk membuat dokumen baru di Microsoft Word adalah ...",
+        "opsi": {
+            "A": "Ctrl+O",
+            "B": "Ctrl+S",
+            "C": "Ctrl+N",
+            "D": "Ctrl+P"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 7,
+        "soal": "Ekstensi file default Microsoft Word 2016 adalah ...",
+        "opsi": {
+            "A": ".doc",
+            "B": ".docx",
+            "C": ".pdf",
+            "D": ".txt"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 8,
+        "soal": "Menu yang digunakan untuk mengatur margin halaman di Word adalah ...",
+        "opsi": {
+            "A": "Layout",
+            "B": "Insert",
+            "C": "View",
+            "D": "Home"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 9,
+        "soal": "Formula yang benar untuk menjumlahkan sel A1 sampai A5 di Excel adalah ...",
+        "opsi": {
+            "A": "=SUM(A1:A5)",
+            "B": "=ADD(A1:A5)",
+            "C": "=TOTAL(A1:A5)",
+            "D": "=COUNT(A1:A5)"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 10,
+        "soal": "Fungsi dari fitur Freeze Panes di Excel adalah ...",
+        "opsi": {
+            "A": "Membekukan isi sel",
+            "B": "Mengunci baris/kolom agar tetap terlihat",
+            "C": "Menghapus isi sel",
+            "D": "Membuat tabel"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 11,
+        "soal": "Contoh sistem operasi berbasis open source adalah ...",
+        "opsi": {
+            "A": "Windows",
+            "B": "Linux",
+            "C": "macOS",
+            "D": "DOS"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 12,
+        "soal": "Task Manager di Windows digunakan untuk ...",
+        "opsi": {
+            "A": "Menginstal aplikasi",
+            "B": "Mengatur BIOS",
+            "C": "Melihat kinerja sistem",
+            "D": "Menghapus virus"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 13,
+        "soal": "Bahasa pemrograman tingkat tinggi yang populer untuk pemula adalah ...",
+        "opsi": {
+            "A": "Assembly",
+            "B": "Python",
+            "C": "Machine Code",
+            "D": "Binary"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 14,
+        "soal": "Dalam pemrograman, simbol == digunakan untuk ...",
+        "opsi": {
+            "A": "Penjumlahan",
+            "B": "Penugasan",
+            "C": "Perbandingan",
+            "D": "Pengurangan"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 15,
+        "soal": "Output dari perintah print(3+2*2) di Python adalah ...",
+        "opsi": {
+            "A": "10",
+            "B": "7",
+            "C": "8",
+            "D": "12"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 16,
+        "soal": "Protokol yang digunakan untuk mengirim email adalah ...",
+        "opsi": {
+            "A": "HTTP",
+            "B": "FTP",
+            "C": "SMTP",
+            "D": "POP3"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 17,
+        "soal": "Perangkat jaringan yang berfungsi menghubungkan beberapa komputer dalam satu jaringan adalah ...",
+        "opsi": {
+            "A": "Router",
+            "B": "Switch",
+            "C": "Repeater",
+            "D": "Firewall"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 18,
+        "soal": "Alamat IP versi 4 terdiri dari ...",
+        "opsi": {
+            "A": "32 bit",
+            "B": "64 bit",
+            "C": "16 bit",
+            "D": "8 bit"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 19,
+        "soal": "Virus komputer adalah ...",
+        "opsi": {
+            "A": "Perangkat keras rusak",
+            "B": "Program jahat yang merusak data",
+            "C": "Software antivirus",
+            "D": "Kesalahan pengguna"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 20,
+        "soal": "Untuk melindungi data, kita dapat menggunakan ...",
+        "opsi": {
+            "A": "Password",
+            "B": "Kabel LAN",
+            "C": "Switch",
+            "D": "VGA Card"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 21,
+        "soal": "Sikap yang benar saat menggunakan komputer adalah ...",
+        "opsi": {
+            "A": "Membanting keyboard",
+            "B": "Duduk tegap dan menjaga jarak mata",
+            "C": "Menatap layar terlalu dekat",
+            "D": "Mematikan komputer paksa"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 22,
+        "soal": "Simbol keselamatan listrik di lab komputer biasanya berwarna ...",
+        "opsi": {
+            "A": "Merah",
+            "B": "Biru",
+            "C": "Kuning",
+            "D": "Putih"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 23,
+        "soal": "DOS merupakan singkatan dari ...",
+        "opsi": {
+            "A": "Disk Operasional Saint",
+            "B": "Deck Operating Sistem",
+            "C": "Disk Operating Sistem",
+            "D": "Deteck Operasional Sistem"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 24,
+        "soal": "Urutan yang benar untuk menampilkan DOS (Command Prompt) di layar berdasarkan opsi program standar adalah ...",
+        "opsi": {
+            "A": "Start - Accesories - Command Prompt",
+            "B": "Start - System - DOS",
+            "C": "Start - Run - System",
+            "D": "Accesories - Start - Command Prompt"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 25,
+        "soal": "Mengaktifkan ulang komputer yang awalnya sudah aktif disebut ...",
+        "opsi": {
+            "A": "Shut down",
+            "B": "Cold booting",
+            "C": "Restart",
+            "D": "Command Line Interface"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 26,
+        "soal": "Central Processing Unit (CPU) menerima arus listrik melalui sebuah komponen yang disebut ...",
+        "opsi": {
+            "A": "Processor",
+            "B": "Floppy",
+            "C": "Power supply",
+            "D": "DVD ROM"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 27,
+        "soal": "Dibawah ini yang merupakan bagian dari peralatan output pada komputer adalah ...",
+        "opsi": {
+            "A": "Monitor, Printer, Speaker",
+            "B": "Monitor, Printer, Scanner",
+            "C": "Printer, Mouse, Kamera",
+            "D": "Monitor, Keyboard, Printer"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 28,
+        "soal": "Pengertian teknologi informasi menurut Haag dan Keen (1996) adalah ...",
+        "opsi": {
+            "A": "Penggabungan komputasi dengan jalur komunikasi",
+            "B": "Seperangkat alat yang digunakan untuk membantu tugas-tugas yang berhubungan dengan pemrosesan data",
+            "C": "Hasil pemrosesan dan pengorganisasian data",
+            "D": "Alat buatan manusia yang menggunakan prinsip saintifik"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 29,
+        "soal": "Alat penerima input yang berasal dari getaran suatu benda atau kilatan cahaya yang jika digerakkan memberikan sinyal instruksi disebut ...",
+        "opsi": {
+            "A": "Keyboard",
+            "B": "Mouse",
+            "C": "Scanner",
+            "D": "Light pen"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 30,
+        "soal": "Alat input yang berfungsi untuk membaca identitas barang di toko atau pusat perbelanjaan yang dicocokkan dengan database adalah ...",
+        "opsi": {
+            "A": "Scanner flatbed",
+            "B": "Optical drive",
+            "C": "Barcode scan",
+            "D": "Touch screen"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 31,
+        "soal": "Bagian dari prosesor yang berfungsi sebagai pusat perhitungan matematis untuk menyelesaikan perintah disebut ...",
+        "opsi": {
+            "A": "Control Unit (CU)",
+            "B": "Arithmatic Logic Unit (ALU)",
+            "C": "Memory Unit (MU)",
+            "D": "Register"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 32,
+        "soal": "Fungsi utama dari Control Unit (CU) pada sebuah prosesor adalah ...",
+        "opsi": {
+            "A": "Melakukan hitungan logis dan matematis",
+            "B": "Menyimpan perintah sementara (cache)",
+            "C": "Mengatur lalu lintas data dan perhitungan tanpa tumpang tindih",
+            "D": "Menampilkan resolusi grafis tinggi"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 33,
+        "soal": "Papan induk elektronik yang mempunyai slot individual untuk dipasangi prosesor, RAM, VGA card, dan komponen lainnya disebut ...",
+        "opsi": {
+            "A": "Mainboard / Motherboard",
+            "B": "Power Supply",
+            "C": "Harddisk",
+            "D": "Optical disk"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 34,
+        "soal": "Jenis RAM dinamis yang memerlukan penyegaran oleh CPU secara teratur agar datanya tidak hilang disebut ...",
+        "opsi": {
+            "A": "SRAM",
+            "B": "DRAM",
+            "C": "SDRAM",
+            "D": "EDORAM"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 35,
+        "soal": "Jenis RAM yang didesain tanpa kapasitor, tidak membutuhkan penyegaran berkala, dan memiliki kinerja sangat cepat namun mahal adalah ...",
+        "opsi": {
+            "A": "DRAM",
+            "B": "SRAM",
+            "C": "NVRAM",
+            "D": "Flash RAM"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 36,
+        "soal": "Jenis RAM komputer yang dilengkapi dengan baterai Litium sehingga saat komputer mati datanya tidak akan hilang adalah ...",
+        "opsi": {
+            "A": "SO-DIMM",
+            "B": "NVRAM",
+            "C": "RDRAM",
+            "D": "VGRAM"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 37,
+        "soal": "RAM yang ukurannya kecil namun berkapasitas besar dan mayoritas digunakan pada laptop/notebook disebut ...",
+        "opsi": {
+            "A": "DDR SDRAM",
+            "B": "SO-DIMM",
+            "C": "VGRAM",
+            "D": "Flash RAM"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 38,
+        "soal": "Perangkat keras yang digunakan untuk mengeluarkan dan merekam suara pada komputer dinamakan ...",
+        "opsi": {
+            "A": "Video Adapter",
+            "B": "Sound Card",
+            "C": "Mainboard",
+            "D": "Processor"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 39,
+        "soal": "Sound card yang pemasangannya ditempelkan melalui slot eksternal seperti port USB atau FireWire disebut ...",
+        "opsi": {
+            "A": "Sound Card Onboard",
+            "B": "Sound Card Offboard",
+            "C": "Sound Card External",
+            "D": "Sound Card Internal"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 40,
+        "soal": "Perangkat keras yang bertugas mengubah atau menerjemahkan sinyal digital dari komputer menjadi tampilan grafis di monitor adalah ...",
+        "opsi": {
+            "A": "RAM",
+            "B": "Sound Card",
+            "C": "VGA (Video Graphics Adapter)",
+            "D": "Processor"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 41,
+        "soal": "Berikut ini adalah contoh perangkat (media) keluaran (output), KECUALI ...",
+        "opsi": {
+            "A": "Monitor / VDU",
+            "B": "Printer",
+            "C": "Plotter",
+            "D": "Light Pen"
+        },
+        "jawaban": "D"
+    },
+    {
+        "id": 42,
+        "soal": "Alat cetak sejenis printer yang memiliki ukuran raksasa dan mampu mencetak pada kertas berukuran A0 disebut ...",
+        "opsi": {
+            "A": "Printer Laser",
+            "B": "Plotter",
+            "C": "Scanner Drum",
+            "D": "Data Projector"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 43,
+        "soal": "Di dalam kapasitas ukuran penyimpanan harddisk, nilai 1 Gigabyte (GB) itu setara dengan ...",
+        "opsi": {
+            "A": "1.024 Byte",
+            "B": "1.024 Kilobyte",
+            "C": "1.024 Megabyte",
+            "D": "1.024 Terabyte"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 44,
+        "soal": "Satuan kapasitas penyimpanan 1.024 Exabyte sama nilainya dengan 1 ...",
+        "opsi": {
+            "A": "Zettabyte (ZB)",
+            "B": "Petabyte (PB)",
+            "C": "Yottabyte (YB)",
+            "D": "Terabyte (TB)"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 45,
+        "soal": "Perangkat penyimpanan data yang berukuran kecil, bersifat removable (bisa dilepas-pasang), bisa ditulis ulang, dan mengandalkan interface USB adalah ...",
+        "opsi": {
+            "A": "Harddisk Internal",
+            "B": "Cakram Optik / DVD",
+            "C": "USB Flash Drive",
+            "D": "Kartu Memori (SD Card)"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 46,
+        "soal": "Perangkat lunak (software) yang memiliki fungsi mengaktifkan semua perangkat keras komputer agar dapat berkomunikasi (contoh: Windows, Linux) disebut ...",
+        "opsi": {
+            "A": "Program Utilitas",
+            "B": "Sistem Operasi (OS)",
+            "C": "Program Aplikasi",
+            "D": "Bahasa Pemrograman"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 47,
+        "soal": "Program utilitas yang berperan untuk memperkecil ukuran sebuah file agar menghemat ruang disk dan mempercepat kinerja pengiriman adalah ...",
+        "opsi": {
+            "A": "Antivirus",
+            "B": "Spyware",
+            "C": "Utilitas Pengompresan (ZIP/RAR)",
+            "D": "Adware"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 48,
+        "soal": "Bahasa komputer generasi pertama melibatkan perintah dalam bentuk angka-angka biner yang unik untuk setiap komputer. Ini disebut sebagai ...",
+        "opsi": {
+            "A": "Bahasa Mesin",
+            "B": "Bahasa Assembler",
+            "C": "Bahasa Tingkat Tinggi",
+            "D": "Bahasa Berorientasi Objek"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 49,
+        "soal": "Bahasa pemrograman generasi kelima yang berfokus pada kemudahan pengembangan antarmuka berorientasi objek (seperti Visual Basic, C++, Java) dikenal dengan istilah ...",
+        "opsi": {
+            "A": "Object Oriented Programming (OOP)",
+            "B": "Basic Programming",
+            "C": "Assembly Language",
+            "D": "Machine Language"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 50,
+        "soal": "Tag HTML utama yang diletakkan pada awal pembuatan struktur dokumen web HTML adalah ...",
+        "opsi": {
+            "A": "<HEAD>",
+            "B": "<TITLE>",
+            "C": "<BODY>",
+            "D": "<HTML>"
+        },
+        "jawaban": "D"
+    },
+    {
+        "id": 51,
+        "soal": "Bahasa yang diaplikasikan untuk mendeskripsikan konten halaman web serta dokumen bisnis menggunakan tag dan label kontekstual data dinamakan ...",
+        "opsi": {
+            "A": "HTML",
+            "B": "XML",
+            "C": "Java",
+            "D": "C++"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 52,
+        "soal": "Brainware atau SDM yang bertugas merancang berbagai perangkat lunak maupun aplikasi komputer agar bisa digunakan pengguna lain dinamakan ...",
+        "opsi": {
+            "A": "Operator",
+            "B": "Administrator",
+            "C": "Programmer",
+            "D": "Graphic Designer"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 53,
+        "soal": "Suatu jaringan komputer terbatas yang biasanya mencakup ruangan atau gedung yang berdekatan seperti lab komputer atau warnet disebut jaringan ...",
+        "opsi": {
+            "A": "LAN (Local Area Network)",
+            "B": "MAN (Metropolitan Area Network)",
+            "C": "WAN (Wide Area Network)",
+            "D": "Internet"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 54,
+        "soal": "Sedangkan jaringan yang memiliki daya cakup setingkat wilayah perkotaan atau gabungan kantor cabang di kota besar dinamakan ...",
+        "opsi": {
+            "A": "LAN",
+            "B": "MAN",
+            "C": "WAN",
+            "D": "Intranet"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 55,
+        "soal": "Tipe jaringan Peer-to-Peer mempunyai kelemahan utama, salah satunya adalah ...",
+        "opsi": {
+            "A": "Biayanya sangat mahal",
+            "B": "Perawatan dan pemeliharaan rumit",
+            "C": "Keamanan sangat bergantung pada setiap pengguna workstation secara mandiri",
+            "D": "Harus menggunakan sistem operasi berbasis server"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 56,
+        "soal": "Sebuah sistem jaringan dimana terdapat sebuah pusat yang menyediakan fasilitas bagi komputer pengguna disebut model ...",
+        "opsi": {
+            "A": "Peer to peer",
+            "B": "Client - Server",
+            "C": "Bus network",
+            "D": "Ring network"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 57,
+        "soal": "Pada Topologi Bus, agar sinyal dapat berhenti dan tidak terpantul kembali, setiap ujung awal dan akhir kabel harus diberikan komponen ...",
+        "opsi": {
+            "A": "Repeater",
+            "B": "HUB",
+            "C": "Terminator",
+            "D": "Switch"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 58,
+        "soal": "Sifat atau kelemahan dari Topologi Bus adalah ...",
+        "opsi": {
+            "A": "Sangat sulit dilakukan troubleshooting dan tidak cocok untuk lalu lintas padat",
+            "B": "Sangat boros penggunaan kabel",
+            "C": "Kebutuhan server super mahal",
+            "D": "HUB merupakan titik lemah jika rusak"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 59,
+        "soal": "Topologi jaringan dimana komputer dirangkai menyerupai lingkaran (cincin) yang meneruskan data dengan bantuan alat TOKEN adalah ...",
+        "opsi": {
+            "A": "Topologi Star",
+            "B": "Topologi Mesh",
+            "C": "Topologi Ring",
+            "D": "Topologi Tree"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 60,
+        "soal": "Apabila komponen Hub/Switch rusak maka seluruh jaringan di bawahnya akan mati total. Pernyataan ini adalah salah satu kekurangan pada topologi ...",
+        "opsi": {
+            "A": "Bus",
+            "B": "Ring",
+            "C": "Star",
+            "D": "Tree"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 61,
+        "soal": "Topologi yang dikembangkan dengan mengkombinasikan karakteristik antara Topologi Star dan Topologi Bus adalah topologi ...",
+        "opsi": {
+            "A": "Mesh",
+            "B": "Tree (Pohon)",
+            "C": "Ring",
+            "D": "Peer to peer"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 62,
+        "soal": "Topologi jaringan yang tingkat fault tolerance (keandalannya) sangat tinggi karena semua node terhubung langsung satu sama lain (dedicated links) dinamakan ...",
+        "opsi": {
+            "A": "Tree",
+            "B": "Star",
+            "C": "Ring",
+            "D": "Mesh"
+        },
+        "jawaban": "D"
+    },
+    {
+        "id": 63,
+        "soal": "Jaringan lokal perusahaan yang menggunakan protokol dan teknologi setara standar internet (misal menggunakan browser web) untuk karyawan internal saja disebut ...",
+        "opsi": {
+            "A": "LAN Offline",
+            "B": "Intranet",
+            "C": "Ekstranet",
+            "D": "WAN"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 64,
+        "soal": "Program yang berfungsi untuk melindungi, menjaga keamanan akses, serta membatasi siapa yang boleh mengakses data Intranet dari dunia Internet luar adalah ...",
+        "opsi": {
+            "A": "Antivirus",
+            "B": "Malware blocker",
+            "C": "Firewall",
+            "D": "Utility disk"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 65,
+        "soal": "Singkatan dari program Ujian Nasional Berbasis Komputer milik pemerintah Indonesia adalah ...",
+        "opsi": {
+            "A": "Ujian Negara Berbasis Komputer",
+            "B": "Ujian Nasional Berbasis Komputer (UNBK)",
+            "C": "Ujian Nasional Berkala Komprehensif",
+            "D": "Ujian Normatif Berbasis Kompetensi"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 66,
+        "soal": "Sistem pelaksanaan ujian nasional konvensional (tradisional) yang mengandalkan kertas ujian biasanya diistilahkan dengan ...",
+        "opsi": {
+            "A": "PBT (Paper Based Test)",
+            "B": "CBT (Computer Based Test)",
+            "C": "IBT (Internet Based Test)",
+            "D": "NBT (National Based Test)"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 67,
+        "soal": "Kemudahan bagi mahasiswa mengakses referensi di perpustakaan digital UGM dari pulau lain tanpa batas jarak dan waktu merupakan bentuk keuntungan dari ...",
+        "opsi": {
+            "A": "Kelas Online",
+            "B": "Perpustakaan Online (Digital Library)",
+            "C": "Diskusi Online",
+            "D": "Pembayaran Digital"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 68,
+        "soal": "Sebutan untuk sistem pendidikan atau pelatihan jarak jauh dengan memfasilitasi pengguna via teknologi informasi internet dan konten digital yang interaktif adalah ...",
+        "opsi": {
+            "A": "Blended training",
+            "B": "e-Learning",
+            "C": "Teleconference",
+            "D": "Offshore Education"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 69,
+        "soal": "Computer Based Learning (CBL) bermakna secara harfiah sebagai ...",
+        "opsi": {
+            "A": "Pembelajaran berbantuan buku teks",
+            "B": "Pembelajaran yang sepenuhnya menggunakan komputer",
+            "C": "Pembelajaran jarak jauh via pos logistik",
+            "D": "Pembelajaran dengan TV Edukasi"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 70,
+        "soal": "Penyelenggaraan aplikasi UNBK di sekolah menerapkan model pengunduhan soal lewat jaringan lalu melayani ujian secara offline (intranet sekolah) untuk kemudian di-upload kembali. Model ini dikenal sebagai sistem ...",
+        "opsi": {
+            "A": "Full-online",
+            "B": "Semi-online",
+            "C": "Full-offline",
+            "D": "Hybrid network"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 71,
+        "soal": "Untuk memecahkan masalah integrasi berbagai ragam sistem manajemen pendidikan (MIS), cara paling tepat menurut ahli adalah ...",
+        "opsi": {
+            "A": "Menghapus aplikasi lama",
+            "B": "Menerapkan standar sistem terbuka (Open Systems)",
+            "C": "Melarang inovasi sekolah",
+            "D": "Mewajibkan paper/cetak kertas penuh"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 72,
+        "soal": "Dalam satuan ukuran digital, 1.024 Zettabyte dikonversikan menjadi sebesar 1 ...",
+        "opsi": {
+            "A": "Terabyte",
+            "B": "Petabyte",
+            "C": "Megabyte",
+            "D": "Yottabyte"
+        },
+        "jawaban": "D"
+    },
+    {
+        "id": 73,
+        "soal": "RAM khusus untuk komputer dengan instruksi ganda secara simultan dan kapasitas chip mampu menampung hingga 4GB adalah ...",
+        "opsi": {
+            "A": "DRAM",
+            "B": "SRAM",
+            "C": "DDR SDRAM",
+            "D": "EDORAM"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 74,
+        "soal": "Jenis scanner ini mempunyai bentuk dasar menyerupai mesin fotocopy namun digunakan secara manual memindai selembar demi selembar (kaca datar). Jenis scanner tersebut dinamakan ...",
+        "opsi": {
+            "A": "Sheetfed Scanner",
+            "B": "Flatbed Scanner",
+            "C": "Drum Scanner",
+            "D": "Film Scanner"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 75,
+        "soal": "Yang bukan merupakan kelemahan dari jaringan klien-server (client-server) adalah ...",
+        "opsi": {
+            "A": "Biaya pemasangannya lebih mahal",
+            "B": "Ketergantungan sangat tinggi pada mesin server",
+            "C": "Sistem administrasi jaringannya menjadi kacau balau",
+            "D": "Membutuhkan spesifikasi komputer server khusus yang handal"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 76,
+        "soal": "Sebuah situs web pada umumnya harus diawali dan diakhiri tag khusus pada sumber kodenya, tag yang mengapit judul tab halaman web dinamakan tag ...",
+        "opsi": {
+            "A": "<TITLE>",
+            "B": "<HEAD>",
+            "C": "<BODY>",
+            "D": "<HTML>"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 77,
+        "soal": "Bahasa Pemrograman Java memiliki sifat unggul di antaranya karena Applet Java bersifat lintas platform (bisa jalan dimana saja) dan dibangun berdasarkan asas pemrograman ...",
+        "opsi": {
+            "A": "C-Language procedural",
+            "B": "Object Oriented Design (Berorientasi Objek)",
+            "C": "Machine native execution",
+            "D": "Linear structured language"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 78,
+        "soal": "Topologi jaringan yang kabelnya menggunakan patch cable / UTP namun node dihubungkan serial mengikuti jalur lingkaran satu arah untuk menghindari Collision (Tabrakan data) disebut topologi ...",
+        "opsi": {
+            "A": "Star",
+            "B": "Ring",
+            "C": "Bus",
+            "D": "Mesh"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 79,
+        "soal": "Dalam kegiatan pembelajaran jarak jauh, e-Learning mendasarkan kriteria pada pengiriman materi menggunakan teknologi standar ...",
+        "opsi": {
+            "A": "Jasa Pos surat kilat",
+            "B": "Bluetooth smartphone",
+            "C": "Standar Teknologi Internet",
+            "D": "Broadcasting Radio FM"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 80,
+        "soal": "Komputer sebagai perangkat keras merupakan sekumpulan komponen yang berhubungan dan saling bekerjasama. Komponen proses di dalam hal ini adalah ...",
+        "opsi": {
+            "A": "Monitor dan printer",
+            "B": "Processor, RAM, dan Motherboard",
+            "C": "Keyboard dan mouse",
+            "D": "CD-ROM dan Scanner"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 81,
+        "soal": "Penggabungan topologi ring dan topologi star untuk menghindari putusnya link tertentu dapat membentuk topologi baru bernama ...",
+        "opsi": {
+            "A": "Topologi Bus",
+            "B": "Topologi Mesh",
+            "C": "Topologi Linear",
+            "D": "Topologi Point to Point"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 82,
+        "soal": "Bahasa pemrograman generasi kedua yang diciptakan untuk meringankan penulisan bilangan biner menggunakan perangkat lunak yang dikenal dengan nama ...",
+        "opsi": {
+            "A": "Compiler Tingkat Tinggi",
+            "B": "Program Assembler",
+            "C": "Interpreter Visual",
+            "D": "Object Database"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 83,
+        "soal": "Komponen brainware (pengguna) yang menekuni di dunia pengeditan rupa, warna, dan juga pembuatan animasi komputer disebut dengan ...",
+        "opsi": {
+            "A": "Graphic Designer",
+            "B": "Programmer Web",
+            "C": "System Analyst",
+            "D": "Help Desk Operator"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 84,
+        "soal": "Perlengkapan komputer seperti monitor LCD, speaker eksternal, dan printer tinta warna tergolong ke dalam peralatan jenis ...",
+        "opsi": {
+            "A": "Input (Masukan)",
+            "B": "Proses (Processing)",
+            "C": "Output (Keluaran)",
+            "D": "Penyimpanan Jaringan"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 85,
+        "soal": "Program Antivirus harus rajin di-update sesering mungkin. Fungsi program tersebut adalah ...",
+        "opsi": {
+            "A": "Mendapatkan uang digital",
+            "B": "Mengumpulkan informasi pengguna diam-diam",
+            "C": "Memutar berkas musik di harddisk",
+            "D": "Mengidentifikasi serta menghapus virus pada memori atau media storage"
+        },
+        "jawaban": "D"
+    },
+    {
+        "id": 86,
+        "soal": "Bahasa pemrograman COBOL, jika dilihat dari tingkat generasinya, umumnya digolongkan ke dalam bahasa pemrograman tingkat ...",
+        "opsi": {
+            "A": "Pertama (Mesin)",
+            "B": "Kedua (Assembler)",
+            "C": "Ketiga (High level statement arithmetic/logic)",
+            "D": "Kelima (Visual click-and-drag)"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 87,
+        "soal": "Sifat RAM sebagai penyimpanan komputer adalah 'volatile', yang berarti bahwa ...",
+        "opsi": {
+            "A": "Kapasitasnya dapat dilipatgandakan",
+            "B": "Sangat mudah meledak atau korslet",
+            "C": "Data yang tersimpan didalamnya akan hilang seketika saat listrik terputus (komputer mati)",
+            "D": "Hanya dapat dibaca dan tidak bisa ditulis ualng"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 88,
+        "soal": "Dalam infrastruktur topologi LAN bertipe Star, apa peran perangkat yang berada persis di tengah jaringan?",
+        "opsi": {
+            "A": "Sebagai terminal penerjemah kode biner ke analog (Modem)",
+            "B": "Sebagai sentral penerus arus listrik utama sistem (Power Supply)",
+            "C": "Sebagai simpul pemusatan komunikasi data penghubung (HUB / Switch Konsentrator)",
+            "D": "Sebagai penguat sinyal jaringan wireless (Repeater)"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 89,
+        "soal": "Tombol shortcut keyboard yang digunakan untuk memulai presentasi (Slide Show) dari awal pada Microsoft PowerPoint adalah ...",
+        "opsi": {
+            "A": "F5",
+            "B": "Shift + F5",
+            "C": "Ctrl + P",
+            "D": "Alt + F4"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 90,
+        "soal": "Perbedaan utama antara Transition dan Animation pada Microsoft PowerPoint adalah ...",
+        "opsi": {
+            "A": "Transition untuk teks, Animation untuk gambar",
+            "B": "Transition adalah efek perpindahan antar slide, Animation adalah efek pada objek di dalam slide",
+            "C": "Transition tidak bisa diatur waktunya, Animation bisa",
+            "D": "Tidak ada perbedaan, keduanya sama"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 91,
+        "soal": "Fungsi rumus =VLOOKUP() pada Microsoft Excel digunakan untuk ...",
+        "opsi": {
+            "A": "Menjumlahkan data secara vertikal",
+            "B": "Mencari nilai tertentu pada kolom pertama sebuah tabel dan mengembalikan nilai di baris yang sama dari kolom lain",
+            "C": "Mencari nilai rata-rata dari sebuah range data vertikal",
+            "D": "Menghitung jumlah sel yang terisi teks"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 92,
+        "soal": "Simbol yang digunakan untuk membuat referensi sel menjadi absolut (tidak berubah saat di-copy) di Microsoft Excel adalah ...",
+        "opsi": {
+            "A": "&",
+            "B": "#",
+            "C": "$",
+            "D": "@"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 93,
+        "soal": "Kombinasi tombol Ctrl + J pada Microsoft Word berfungsi untuk ...",
+        "opsi": {
+            "A": "Membuat teks menjadi tebal (Bold)",
+            "B": "Meratakan teks ke tengah (Center)",
+            "C": "Meratakan teks ke kiri dan kanan (Justify)",
+            "D": "Membuka menu pencarian (Find)"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 94,
+        "soal": "Fitur di Microsoft Word yang digunakan untuk membuat surat massal dengan format yang sama namun penerima yang berbeda-beda adalah ...",
+        "opsi": {
+            "A": "Mail Merge",
+            "B": "Macro",
+            "C": "Track Changes",
+            "D": "Table of Contents"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 95,
+        "soal": "Pada Microsoft Excel, jika kita ingin menggabungkan beberapa sel menjadi satu sel dan meletakkan teksnya di tengah, fitur yang diklik adalah ...",
+        "opsi": {
+            "A": "Wrap Text",
+            "B": "Merge & Center",
+            "C": "Format Painter",
+            "D": "AutoSum"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 96,
+        "soal": "Untuk menambahkan slide baru di Microsoft PowerPoint, shortcut yang tepat adalah ...",
+        "opsi": {
+            "A": "Ctrl + N",
+            "B": "Ctrl + M",
+            "C": "Ctrl + S",
+            "D": "Ctrl + B"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 97,
+        "soal": "Sistem operasi Android pada dasarnya dikembangkan berbasiskan kernel dari sistem operasi ...",
+        "opsi": {
+            "A": "Windows",
+            "B": "macOS",
+            "C": "Linux",
+            "D": "Symbian"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 98,
+        "soal": "Format file aplikasi mentah (installer) untuk sistem operasi Android memiliki ekstensi ...",
+        "opsi": {
+            "A": ".exe",
+            "B": ".apk",
+            "C": ".dmg",
+            "D": ".ipa"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 99,
+        "soal": "Integrated Development Environment (IDE) resmi dari Google yang digunakan untuk membuat aplikasi Android adalah ...",
+        "opsi": {
+            "A": "Visual Studio Code",
+            "B": "Eclipse",
+            "C": "Android Studio",
+            "D": "NetBeans"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 100,
+        "soal": "Bahasa pemrograman modern yang secara resmi sangat direkomendasikan (first-class) oleh Google untuk pengembangan aplikasi Android saat ini adalah ...",
+        "opsi": {
+            "A": "Kotlin",
+            "B": "Swift",
+            "C": "PHP",
+            "D": "Ruby"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 101,
+        "soal": "Toko aplikasi resmi yang menjadi bawaan (default) sistem operasi Android buatan Google adalah ...",
+        "opsi": {
+            "A": "App Store",
+            "B": "Play Store",
+            "C": "Galaxy Store",
+            "D": "Microsoft Store"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 102,
+        "soal": "Versi-versi awal dari sistem operasi Android unik karena penamaannya selalu menggunakan nama ...",
+        "opsi": {
+            "A": "Nama pahlawan",
+            "B": "Nama planet",
+            "C": "Nama makanan manis / dessert",
+            "D": "Nama kota di Amerika"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 103,
+        "soal": "Komponen utama pada Android yang mewakili satu layar dengan antarmuka pengguna (User Interface) disebut ...",
+        "opsi": {
+            "A": "Activity",
+            "B": "Service",
+            "C": "Broadcast Receiver",
+            "D": "Content Provider"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 104,
+        "soal": "Dalam pengembangan Android, file yang bertugas mengatur perizinan aplikasi (permissions) dan mendeklarasikan komponen aplikasi adalah ...",
+        "opsi": {
+            "A": "build.gradle",
+            "B": "AndroidManifest.xml",
+            "C": "strings.xml",
+            "D": "activity_main.xml"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 105,
+        "soal": "Kecerdasan Buatan (Artificial Intelligence) adalah ...",
+        "opsi": {
+            "A": "Program komputer yang selalu benar dan tidak pernah salah",
+            "B": "Simulasi kecerdasan manusia yang dimodelkan di dalam mesin dan diprogram agar bisa berpikir seperti manusia",
+            "C": "Perangkat keras terbaru yang menggunakan material organik",
+            "D": "Jaringan komputer yang menghubungkan seluruh dunia tanpa kabel"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 106,
+        "soal": "Salah satu cabang AI yang fokus memberikan mesin kemampuan untuk belajar secara otomatis dari data dan pengalaman tanpa diprogram secara eksplisit disebut ...",
+        "opsi": {
+            "A": "Data Mining",
+            "B": "Machine Learning",
+            "C": "Cloud Computing",
+            "D": "Internet of Things"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 107,
+        "soal": "Kemampuan Artificial Intelligence untuk mengenali, memahami, dan memanipulasi bahasa manusia, baik lisan maupun tulisan, disebut dengan ...",
+        "opsi": {
+            "A": "Natural Language Processing (NLP)",
+            "B": "Computer Vision",
+            "C": "Robotic Process Automation",
+            "D": "Expert Systems"
+        },
+        "jawaban": "A"
+    },
+    {
+        "id": 108,
+        "soal": "Sebuah uji yang diusulkan pada tahun 1950 untuk mengukur sejauh mana sebuah mesin (AI) dapat menunjukkan perilaku cerdas yang tidak dapat dibedakan dari manusia adalah ...",
+        "opsi": {
+            "A": "Pygmalion Test",
+            "B": "Turing Test",
+            "C": "McCarthy Test",
+            "D": "Asimov's Law"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 109,
+        "soal": "Di bawah ini yang merupakan contoh penerapan Artificial Intelligence dalam kehidupan sehari-hari adalah ...",
+        "opsi": {
+            "A": "Mengetik dokumen menggunakan mesin tik",
+            "B": "Sistem rekomendasi film di Netflix dan asisten virtual Siri",
+            "C": "Menyimpan data di Flashdisk",
+            "D": "Mencetak foto menggunakan printer inkjet"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 110,
+        "soal": "Jaringan Saraf Tiruan (Artificial Neural Network) dalam AI terinspirasi dari ...",
+        "opsi": {
+            "A": "Cara kerja mesin pencari Google",
+            "B": "Struktur dan fungsi jaringan saraf pada otak manusia",
+            "C": "Algoritma pengurutan data matematika",
+            "D": "Topologi jaringan komputer mesh"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 111,
+        "soal": "Tokoh ilmuwan komputer yang sering dijuluki sebagai 'Bapak Kecerdasan Buatan' karena memprakarsai konferensi Dartmouth 1956 adalah ...",
+        "opsi": {
+            "A": "Alan Turing",
+            "B": "John McCarthy",
+            "C": "Bill Gates",
+            "D": "Steve Jobs"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 112,
+        "soal": "Generative AI (seperti ChatGPT atau Claude) merupakan AI yang utamanya dirancang untuk ...",
+        "opsi": {
+            "A": "Mengendalikan mesin pabrik secara otomatis",
+            "B": "Membuat/menghasilkan konten baru seperti teks, gambar, atau audio berdasarkan prompt pengguna",
+            "C": "Menyimpan data perusahaan dalam skala besar",
+            "D": "Mendinginkan server komputer agar tidak overheat"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 113,
+        "soal": "Pada alamat website 'www.politeknik-triguna.ac.id', domain '.ac.id' menunjukkan bahwa website tersebut milik institusi ...",
+        "opsi": {
+            "A": "Pemerintah (Government)",
+            "B": "Komersial / Perusahaan (Company)",
+            "C": "Pendidikan Tinggi / Akademik (Academic)",
+            "D": "Organisasi Non-Profit"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 114,
+        "soal": "Jika kita menemukan alamat IP 192.168.1.10, IP tersebut termasuk ke dalam kelas (class) ...",
+        "opsi": {
+            "A": "Kelas A",
+            "B": "Kelas B",
+            "C": "Kelas C",
+            "D": "Kelas D"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 115,
+        "soal": "Perangkat jaringan yang berfungsi menentukan jalur terbaik (routing) agar paket data dapat sampai ke jaringan tujuan di internet adalah ...",
+        "opsi": {
+            "A": "Hub",
+            "B": "Switch",
+            "C": "Router",
+            "D": "Modem"
+        },
+        "jawaban": "C"
+    },
+    {
+        "id": 116,
+        "soal": "Metode atau teknik manipulasi psikologis yang digunakan oleh hacker untuk mengelabui pengguna agar memberikan informasi rahasia (seperti password) disebut ...",
+        "opsi": {
+            "A": "DDoS Attack",
+            "B": "Social Engineering",
+            "C": "SQL Injection",
+            "D": "Ransomware"
+        },
+        "jawaban": "B"
+    },
+    {
+        "id": 117,
+        "soal": "Satuan kecepatan transfer data pada sebuah jaringan komputer umumnya diukur dalam besaran ...",
+        "opsi": {
+            "A": "Hertz (Hz)",
+            "B": "Byte per second (Bps) / Bit per second (bps)",
+            "C": "Pixels per inch (ppi)",
+            "D": "Revolutions per minute (RPM)"
+        },
+        "jawaban": "B"
+    }
+]

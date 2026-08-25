@@ -14,12 +14,19 @@ Static quiz app (HTML/CSS/JS) — siap di-host di **GitHub Pages** (tanpa PHP/SQ
 
 | ID | Isi |
 |----|-----|
-| `android` | Versi & codename Android |
+| `android` | **Hanya** codename & nomor versi |
+| `android_pengetahuan` | APK, Activity, Manifest, IDE, runtime |
 | `singkatan` | Singkatan IT dengan jebakan mirip |
 | `software_klasik` | Browser/app legendaris |
 | `ai` | Dasar AI / ML / LLM |
 | `hardware` | Hardware + gambar SVG |
-| `office` | Word / Excel / PowerPoint |
+| `printer` | Jenis printer (inkjet, laser, thermal, …) |
+| `office` | Word/Excel/PPT — opsi jalur menu mirip |
+| `keamanan` | Malware *-ware + skenario hack |
+| `jaringan` | LAN/WAN, topologi, IP, router |
+| `pemrograman` | Python, HTML, generasi bahasa |
+| `sistem` | OS, DOS, utilitas |
+| `tik` | Konsep TI, UNBK, e-learning |
 
 ## Jalankan lokal
 
@@ -47,4 +54,10 @@ Untuk sync PC ↔ HP: **Export JSON** di beranda, kirim file, lalu **Import JSON
 
 ```bash
 node tools/gen_questions.mjs
+```
+
+Ini juga otomatis merge `bank_soal_lctk_revisi.json`. Atau merge saja:
+
+```bash
+node tools/merge_revisi.mjs
 ```

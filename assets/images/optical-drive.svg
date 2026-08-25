@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Optical drive">
+  <rect width="320" height="200" fill="#f4f7fb"/>
+  <rect x="50" y="60" width="220" height="70" rx="6" fill="#334155"/>
+  <rect x="70" y="80" width="150" height="12" fill="#0f172a"/>
+  <circle cx="245" cy="95" r="10" fill="#22c55e"/>
+  <ellipse cx="160" cy="40" rx="40" ry="12" fill="#94a3b8" opacity=".5"/>
+  <text x="160" y="170" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="13" fill="#475569">Optical disc drive (CD/DVD)</text>
+</svg>
